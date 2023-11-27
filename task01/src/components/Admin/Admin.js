@@ -65,7 +65,7 @@ export default function Admin({ children }) {
 
   return (
     <>
-      <Box minH='100vh' bg={useColorModeValue("gray.100", "gray.900")}>
+      <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
         <SidebarContent
           onClose={() => onClose}
           display={{ base: "none", md: "block" }}
@@ -74,11 +74,12 @@ export default function Admin({ children }) {
         <Drawer
           autoFocus={false}
           isOpen={isOpen}
-          placement='right'
+          placement="right"
           onClose={onClose}
           returnFocusOnClose={false}
           onOverlayClick={onClose}
-          size='full'>
+          size="full"
+        >
           <DrawerContent>
             <SidebarContent onClose={onClose} />
           </DrawerContent>
@@ -86,7 +87,7 @@ export default function Admin({ children }) {
 
         {/* mobilenav */}
         <MobileNav onOpen={onOpen} />
-        <Box ml={{ base: 0, md: 60 }} p='4'>
+        <Box ml={{ base: 0, md: 60 }} p="4">
           {children}
           <DealerTables />
         </Box>
@@ -98,18 +99,19 @@ export default function Admin({ children }) {
 const SidebarContent = ({ onClose, ...rest }) => {
   return (
     <Box
-      transition='3s ease'
+      transition="3s ease"
       bg={useColorModeValue("white", "gray.900")}
-      borderRight='1px'
+      borderRight="1px"
       borderRightColor={useColorModeValue("gray.200", "gray.700")}
       w={{ base: "full", md: 60 }}
-      pos='fixed'
-      h='full'
-      {...rest}>
-      <Flex h='20' alignItems='center' mx='8' justifyContent='space-between'>
-        <Link to='/'>
+      pos="fixed"
+      h="full"
+      {...rest}
+    >
+      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
+        <Link to="/">
           <Image
-            src='../../images/index1.png'
+            src="../../images/index1.png"
             maxH={"70px"}
             maxWidth={"100px"}
           />
@@ -151,24 +153,26 @@ const NavItem = ({ icon, children, ...rest }) => {
             : children == "Feedbacks"
             ? () => onOpen()
             : null
-        }>
+        }
+      >
         <Flex
-          align='center'
-          p='4'
-          mx='4'
+          align="center"
+          p="4"
+          mx="4"
           w={"100%"}
-          borderRadius='lg'
-          role='group'
-          cursor='pointer'
+          borderRadius="lg"
+          role="group"
+          cursor="pointer"
           _hover={{
             bg: "red.300",
             color: "white",
           }}
-          {...rest}>
+          {...rest}
+        >
           {icon && (
             <Icon
-              mr='4'
-              fontSize='16'
+              mr="4"
+              fontSize="16"
               _groupHover={{
                 color: "white",
               }}
@@ -178,7 +182,7 @@ const NavItem = ({ icon, children, ...rest }) => {
           {children}
         </Flex>
       </Button>
-      <Modal isOpen={isOpen} onClose={onClose} size='full'>
+      <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
@@ -234,45 +238,48 @@ const MobileNav = ({ onOpen, ...rest }) => {
     <Flex
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 4 }}
-      height='20'
-      alignItems='center'
+      height="20"
+      alignItems="center"
       bg={useColorModeValue("white", "gray.900")}
-      borderBottomWidth='1px'
+      borderBottomWidth="1px"
       borderBottomColor={useColorModeValue("gray.200", "gray.700")}
       justifyContent={{ base: "space-between", md: "flex-end" }}
-      {...rest}>
+      {...rest}
+    >
       <Button onClick={toggleColorMode}>
         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       </Button>
       <IconButton
         display={{ base: "flex", md: "none" }}
         onClick={onOpen}
-        variant='outline'
-        aria-label='open menu'
+        variant="outline"
+        aria-label="open menu"
         icon={<FiMenu />}
       />
 
       <Text
         display={{ base: "flex", md: "none" }}
-        fontSize='2xl'
-        fontFamily='monospace'
-        fontWeight='bold'>
-        <Image src='../../images/index1.png' maxH={"70px"} maxWidth={"100px"} />
+        fontSize="2xl"
+        fontFamily="monospace"
+        fontWeight="bold"
+      >
+        <Image src="../../images/index1.png" maxH={"70px"} maxWidth={"100px"} />
       </Text>
 
       <HStack spacing={{ base: "0", md: "6" }}>
         <IconButton
-          size='lg'
-          variant='ghost'
-          aria-label='open menu'
+          size="lg"
+          variant="ghost"
+          aria-label="open menu"
           icon={<FiBell />}
         />
         <Flex alignItems={"center"}>
           <Menu>
             <MenuButton
               py={2}
-              transition='all 0.3s'
-              _focus={{ boxShadow: "none" }}>
+              transition="all 0.3s"
+              _focus={{ boxShadow: "none" }}
+            >
               <HStack>
                 <Avatar
                   size={"sm"}
@@ -282,11 +289,12 @@ const MobileNav = ({ onOpen, ...rest }) => {
                 />
                 <VStack
                   display={{ base: "none", md: "flex" }}
-                  alignItems='flex-start'
-                  spacing='1px'
-                  ml='2'>
-                  <Text fontSize='sm'>Name</Text>
-                  <Text fontSize='xs' color='gray.600'>
+                  alignItems="flex-start"
+                  spacing="1px"
+                  ml="2"
+                >
+                  <Text fontSize="sm">{localStorage.getItem("name")}</Text>
+                  <Text fontSize="xs" color="gray.600">
                     Admin
                   </Text>
                 </VStack>
@@ -297,7 +305,8 @@ const MobileNav = ({ onOpen, ...rest }) => {
             </MenuButton>
             <MenuList
               bg={useColorModeValue("white", "gray.900")}
-              borderColor={useColorModeValue("gray.200", "gray.700")}>
+              borderColor={useColorModeValue("gray.200", "gray.700")}
+            >
               <MenuItem>Profile</MenuItem>
               <MenuItem>Settings</MenuItem>
               <MenuItem>Billing</MenuItem>

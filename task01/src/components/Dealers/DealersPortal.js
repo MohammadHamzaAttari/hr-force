@@ -62,7 +62,7 @@ const LinkItems = [
   { name: "Feedbacks", icon: FcFeedback },
 ];
 
-export default function Admin({ children }) {
+export default function DealerPortal({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -269,7 +269,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
                   spacing="1px"
                   ml="2"
                 >
-                  <Text fontSize="sm">{localStorage.getItem("firstName")}</Text>
+                  <Text fontSize="sm">{localStorage.getItem("name")}</Text>
                   <Text fontSize="xs" color="gray.600">
                     Manager
                   </Text>

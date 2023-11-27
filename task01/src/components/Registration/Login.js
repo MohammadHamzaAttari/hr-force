@@ -16,32 +16,59 @@ import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 //import { LoginUser } from "../Constant/url";
 import { data } from "../Constant/user";
+
 export default function Login() {
   const history = useNavigate();
-  const [email, setEmail] = useState();
+
   const [name, setName] = useState();
   const [password, setPassword] = useState();
+  const [userrole, setUserRole] = useState("");
 
-  const store = { Email: email, Password: password };
   const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
   const handleSignIn = () => {
-    setIsLoading(true);
-    const arrData = data.find((data) => {
-      // eslint-disable-next-line no-unused-expressions
-      data.name == name && data.password == password;
-      console.log(data.name);
-    });
-    if (arrData.role == "admin") {
-      history("/admin");
-    }
-    if (arrData.role == "manager") {
-      history("/manager");
-    }
-    if (arrData.role == "user") {
-      history("/user");
+    const arrData = data.find(
+      (data) => data.name === name && data.password === password
+    );
+    console.log(arrData);
+    if (arrData) {
+      if (arrData.role === "admin") {
+        toast({
+          title: "Account LoggedIn.",
+          description: "We've LoggedIn your account for you.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+        localStorage.clear();
+        localStorage.setItem("name", arrData.name);
+        history("/admin");
+      } else if (arrData.role === "manager") {
+        toast({
+          title: "Account LoggedIn.",
+          description: "We've LoggedIn your account for you.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+        localStorage.clear();
+        localStorage.setItem("name", arrData.name);
+        history("/manager");
+      } else {
+        toast({
+          title: "Account LoggedIn.",
+          description: "We've LoggedIn your account for you.",
+          status: "success",
+          duration: 9000,
+          isClosable: true,
+        });
+        localStorage.clear();
+        localStorage.setItem("name", arrData.name);
+        history("/user");
+      }
     }
   };
+
   /*   const handleSignIn = () => {
     setIsLoading(true);
      fetch(LoginUser, {
@@ -84,6 +111,7 @@ export default function Login() {
       })
       .catch((err) => {});
   }; */
+
   return (
     <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
       <Flex p={8} flex={1} align={"center"} justify={"center"}>
@@ -91,11 +119,11 @@ export default function Login() {
           <Heading fontSize={"2xl"}>Sign in to your account</Heading>
 
           <FormControl id="email">
-            <FormLabel>Email address</FormLabel>
+            <FormLabel>User Name</FormLabel>
             <Input
               type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </FormControl>
           <FormControl id="password">
@@ -124,13 +152,7 @@ export default function Login() {
                 thickness="4px"
               />
             ) : (
-              <Button
-                colorScheme={"red"}
-                variant={"solid"}
-                onClick={handleSignIn}
-              >
-                Sign in
-              </Button>
+              <Button onClick={handleSignIn}>Sign in</Button>
             )}
           </Stack>
         </Stack>

@@ -9,6 +9,8 @@ import RegisterAdmin from "./components/Registration/RegisterAdmin";
 import RegisterDealer from "./components/Registration/RegisterDealer";
 import LoginDealer from "./components/Dealers/LoginDealer";
 import AdminLogin from "./components/Admin/AdminLogin";
+import DealerPortal from "./components/Dealers/DealersPortal";
+import Home from "./components/Pages/Home";
 
 function App() {
   const [data, setData] = useState();
@@ -28,7 +30,8 @@ function App() {
         <Route path="/registerAdmin" element={<RegisterAdmin />} />
         <Route path="/loginAdmin" element={<AdminLogin />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/manager" element={<Admin />} />
+        <Route path="/user" element={<Home />} />
+        <Route path="/manager" element={<DealerPortal />} />
         <Route path="*" element={<NoPage></NoPage>} />
       </Routes>
     </div>
