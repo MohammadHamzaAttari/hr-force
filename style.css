@@ -392,7 +392,9 @@ main {
     .menus select{
         display: none;
     }
-    
+    .filter{
+       display: flex;
+    }
     .footer{
         display: flex;
         flex-direction: row;
