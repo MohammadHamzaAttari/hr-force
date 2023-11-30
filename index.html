@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>My Ecommerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Your header content here -->
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img class="picture-inner"
+                        src="https://consumer.tcimg.net/assets/_next/static/images/tc-logo-white-500-4f595f7ed8d0cc657d151b089a9bd452.png?auto=format&amp;h=39&amp;w=133"
+                        srcset="https://consumer.tcimg.net/assets/_next/static/images/tc-logo-white-500-4f595f7ed8d0cc657d151b089a9bd452.png?auto=format&amp;h=39&amp;w=133 1x, https://consumer.tcimg.net/assets/_next/static/images/tc-logo-white-500-4f595f7ed8d0cc657d151b089a9bd452.png?auto=format&amp;h=78&amp;w=266 2x"
+                        loading="eager" alt="TrueCar" data-qa="TCDCLogo" data-test="tcdcLogo">
+                </div>
+                <div class="menus">
+                    <ul class="nav-links">
+                        <li class="dropdown"><label for="New">New<span class="dropdown-icon">&#9660;</span></label>
+                            <select id="New" name="New">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </li>
+                        <li class="dropdown"><label for="Used">Used<span class="dropdown-icon">&#9660;</span></label>
+                            <select id="Used" name="Used">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </li>
+                        <li class="dropdown"><label for="Electric">Electric<span
+                                    class="dropdown-icon">&#9660;</span></label>
+                            <select id="Electric" name="Electric">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+                <form class="search-bar">
+                    <input type="text" placeholder="Search...">
+                    <button class="signup-btn">Sign Up</button>
+                </form>
+
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Car buying <br>shaped to your life</h1>
+        <form class="search-bar-hero">
+            <input type="text" placeholder="search make, model, or type">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+     <br>
+    <section class="filter">
+        <div class="container">
+        <div class="left-filter">
+            <h2 class="Know">Know your buying power</h2>
+            <p>How much car can you afford? Find out, then see vehicles<br> that match your budget</p>
+            <img src="./images/filter.png" alt="filterImage" height="200px" width="400px">
+        </div>
+        <div class="right-filter">
+            <div class="car">
+                <div class="car-Details">
+                    <h2>Car Details</h2>
+                </div>
+                <div class="content">
+                    <label for="make">Make:</label>
+                    <input type="text" id="make" name="make" placeholder="Enter make...">
+
+                    <label for="model">Model:</label>
+                    <input type="text" id="model" name="model" placeholder="Enter model...">
+
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" name="year" placeholder="Enter year...">
+
+                    <label for="color">Color:</label>
+                    <input type="text" id="color" name="color" placeholder="Enter color...">
+
+                    <button class="filterbtn">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <hr>
+    <main>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+
+            <div class="Four-products">
+                <div class="product">
+                    <img src="./images/product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./images/product2.jpg" alt="Product 1">
+                    <h3>Product 2</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./images/Product3.jpg" alt="Product 1">
+                    <h3>Product 3</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./images/product4.jpg" alt="Product 1">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                </div>
+                <div class="Four-products">
+                <div class="product">
+                    <img src="./images/product5.jpg" alt="Product 1">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./images/product6.jpg" alt="Product 1">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+          
+            
+                <div class="product">
+                    <img src="./images/product7.jpg" alt="Product 1">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./images/product8.jpg" alt="Product 1">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+                </div>
+                <div class="Four-Products">
+                <div class="product">
+                    <img src="./images/product9.jpg" alt="Product 1">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 1. Lorem ipsum dolor sit amet.</p>
+                    <p>$99.99</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            </div>
+            <!-- More products can be added similarly -->
+        </section>
+    </main>
+    <footer class="bottom">
+        <div class="footer">
+        <div class="features">
+            <h3>Products</h3>
+            <a href="">Used</a>
+            <a href="">New</a>
+            <a href="">Sell your Car</a>
+        </div>
+        <div class="career">
+            <h3>Features</h3>
+            <a href="">Invest</a>
+            <a href="">Career</a>
+            <a href="">Press</a>
+        </div>
+        <div class="social-media">
+            <h3>Social Media</h3>
+            <a href="">Facebook</a>
+            <a href="">X</a>
+            <a href="">Instagram</a>
+        </div>
+    </div>
+        <p>&copy; 2023 YourWebsite. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
