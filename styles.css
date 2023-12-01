@@ -19,3 +19,49 @@ h1{
     height: 100%;
     background-color: rgba(0, 0, 0, .2);
 }
+
+
+.col-sm-3{
+    padding:15px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}  
+.filterbtn{
+    background-color: black;
+    color: white;
+    font-size: bold;
+    text-shadow: 5px;
+} 
+.filter-select{
+    width: 100%;
+} 
+rf-heading{
+    width:100%;
+    font-size: 30px;
+    text-align: center;
+}
+.price{
+    font-weight: bold;
+    color: purple;
+}
+.btn{
+    background-color: black;
+    color: white;
+    font-style: bold;
+}
+.footer{
+    background-color: black;
+    color: white;
+
+}
+footer a{
+    text-decoration: none;
+    color: rgba(224, 205, 205, 0.5);
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.footer-p{
+    padding-top: 25px;
+    text-align: center;
+}
