@@ -16,7 +16,7 @@ export default{
                 },
                 {
                     id:'2',
-                    firstName:'Muhammad',
+                    firstName:'Majid',
                     lastName:"sajid",
                     areas:['Ai','backend','peers'],
                     description:"I'm freelancer for years",
