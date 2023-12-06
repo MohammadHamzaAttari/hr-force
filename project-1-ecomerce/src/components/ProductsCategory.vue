@@ -1,8 +1,9 @@
 <template>
+    <navBar />
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-3">
-                <div v-for="item in allProducts" :key="item.id">
+                <div v-for="item in Category" :key="item.id">
                     <div v-for="data in item.products" :key="data.id" class="card">
                         <img :src="data.thumbnail" class="card-img-top" :alt="data.title" />
                         <div class="card-body">
@@ -21,22 +22,29 @@
 
   
 <script>
-import {allProducts} from '../../apiUrlsPath';
+import { showProductCategory } from '../../apiUrlsPath';
+import navBar from './navBar.vue';
+
 export default {
-    name: 'ProductCategory',
+    name: 'ProductsCategory',
+    components: {
+        navBar
+    },
     data() {
         return {
-            allProducts: [],
+            Category: [],
         }
     },
     methods: {
 
-       async getAllProducts() {
-            await fetch(allProducts)
-                .then(res =>res.json())
+       async getSpecificCategory() {
+            const CategoryId = this.$route.params.categoryId
+            console.log(showProductCategory + CategoryId)
+            await fetch(showProductCategory + '/' + CategoryId)
+                .then(res => res.json())
                 .then(data => {
-                    this.allProducts.push(data);
-                    console.log(this.allProducts)
+                    this.Category.push(data);
+                    console.log(this.Category)
                 });
         },
         specificProduct(productId){
@@ -45,11 +53,11 @@ export default {
 
 
     },
-    
+
 
     created() {
-        this.getAllProducts()
-        
+        this.getSpecificCategory()
+
     }
 }
 </script>

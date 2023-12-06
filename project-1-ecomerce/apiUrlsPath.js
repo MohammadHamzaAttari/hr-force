@@ -1,2 +1,6 @@
 export const login='https://dummyjson.com/auth/login'
 export const base='https://dummyjson.com'
+export const allProducts='https://dummyjson.com/products?limit=16&skip=10&select=title,description,price,id,thumbnail'
+export const getProducts='https://dummyjson.com/products'
+export const getProductCategory='https://dummyjson.com/products/categories'
+export const showProductCategory='https://dummyjson.com/products/category'
