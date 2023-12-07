@@ -4,7 +4,7 @@
         <h4>${{ rate }}/hour</h4>
         <div class="alignment">
             <div>
-                <span v-for="area in areas" :key="area">{{ area }}</span>
+                <base-badge v-for="area in areas" :key="area" :type="area" :title="area">{{ area }}</base-badge>
             </div>
             <div>
                 <base-button mode="outline" :to="coachContactLink">Contact</base-button>
@@ -33,10 +33,13 @@ export default {
 <style scoped>
 li {
     margin: 1rem 0;
-    padding: 1rem;
+  
     border: 1px solid #424242;
     border-radius: 12px;
     list-style: none;
+}
+li a:hover{
+    background-color: blueviolet;
 }
 
 .alignment {
