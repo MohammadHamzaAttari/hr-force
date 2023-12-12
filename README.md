@@ -1,4 +1,4 @@
-#Api Vuejs
+# Api Vuejs
 ### Store management:
 In this repository, another way of state management is implemented. We manage the state in a simple way in first step, 
 then we implemented with modules and use the helper mapper to reduce the code. In this repository, we study the 
